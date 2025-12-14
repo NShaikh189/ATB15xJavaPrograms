@@ -1,5 +1,7 @@
 package Practice;
 
+import java.sql.SQLOutput;
+
 public class P01_Swap_numbers
 {
 
@@ -22,6 +24,9 @@ public class P01_Swap_numbers
     {
         int a=5;
         int b=4;
+
+        Integer x=(Integer)a;
+        System.out.println(x);
         System.out.println("Before swap"+a+","+b);
     swapNumber(a,b);
     }
