@@ -71,6 +71,24 @@ public class J_08_ArraysConcept {
 
        System.out.println(empData.length);
        System.out.println(Arrays.toString(empData));//[null, 36, null, 9762341826, null]
+
+
+       //Limitations:
+       /*
+       1. Similar type of data
+       2. size is fixed: Static and NOT dynamic
+       e.g. shopping site has 20 products in 2023,
+       in 2024, product count is 100 during fest offer, increase size to 100
+       in 2024, off season list only 50 products, using size of 100 but memory for 50 products size is waste
+        */
+
+       //Usecases for static Array
+       /*
+       Cinema theatres
+       Flightbooking
+       Shopping Category - static
+       Products in Category - dynamic
+       * */
    }
 
 
