@@ -59,6 +59,7 @@ public class J_08_ArraysConcept {
        int[] arr3;
        arr3 = new int[]{3,2,1};
 
+
        //Not allowed size + value
        //int[] arr4 = new int[5]{2,5,3,2,5};
        //Object array : can store data of any data types (super class of array)
@@ -72,7 +73,10 @@ public class J_08_ArraysConcept {
        System.out.println(empData.length);
        System.out.println(Arrays.toString(empData));//[null, 36, null, 9762341826, null]
 
-
+       for(Object i: empData)
+       {
+           System.out.println(i);
+       }
        //Limitations:
        /*
        1. Similar type of data
