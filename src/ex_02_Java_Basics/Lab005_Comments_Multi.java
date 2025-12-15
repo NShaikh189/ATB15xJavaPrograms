@@ -6,6 +6,9 @@ package ex_02_Java_Basics;
 * Learning: ATB15x
 * */
 //cmd+/ (To add comments)
+
+//Class can have multiple main methods but only one will be executed having the signature
+//public static void main(String args[])
 public class Lab005_Comments_Multi {
     public static void main(String[] args)
         {
