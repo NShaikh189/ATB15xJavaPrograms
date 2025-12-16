@@ -1,12 +1,20 @@
 package Practice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /*
 *Array -- Collection of similar data types, static array
 *ArrayList -- CLASS, dynamic Array, create object of the ArrayList using new Keyboard
+* Default Virtual Capacity - 10, pyhsical capacity - memory space consumed
+* Dynamic allocation - Increase capacity by VC/2
+* remove(index) - Remove the value and shrink the capacity
+* e.g. [Hi, Hello, World, Login]
+* a.remove(2); // remove World
+* sout(a_; //[Hi, Hello, Login]
 */
-public class J_10_ArraListConcept {
+public class J_10_ArrayListConcept {
     public static void main(String[] args) {
         ArrayList ar = new ArrayList();
         ar.add(100);
@@ -54,7 +62,18 @@ public class J_10_ArraListConcept {
         empNamesList.add("AJ");
         empNamesList.add("Messi");
         empNamesList.add("Sachin");
+        empNamesList.add("Dhoni");
+        empNamesList.add("Rohit");
         System.out.println(empNamesList.size());
         System.out.println(empNamesList);
+
+        //over empNamesList.add(6,"Ronaldo");//IndexOutOfBoundsException: Index: 6, Size: 3
+        System.out.println(empNamesList);
+
+        empNamesList.remove(2);
+        System.out.println(empNamesList);
+        int ix[]={3,4,2,5};
+        List<Integer> ix_list = Arrays.stream(ix).boxed().toList();
+        System.out.println(ix_list);
     }
 }
