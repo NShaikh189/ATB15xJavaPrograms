@@ -1,5 +1,7 @@
 package Practice;
 
+import java.sql.SQLOutput;
+
 /*
 * static keyword can be used to create a common variable for all the objects of the class
 * it is stored in the CMA(Common memory allocation) also callled as Metaspace
@@ -16,7 +18,7 @@ public class J_10_Class_Objects {
     public void car()
     {
         System.out.println(J_10_Class_Objects.wheels);
-
+        System.out.println("Test ");
         System.out.println(wheels);
     }
     public static void main(String[] args) {
