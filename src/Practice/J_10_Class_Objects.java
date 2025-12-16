@@ -16,6 +16,7 @@ public class J_10_Class_Objects {
     public void car()
     {
         System.out.println(J_10_Class_Objects.wheels);
+
         System.out.println(wheels);
     }
     public static void main(String[] args) {
