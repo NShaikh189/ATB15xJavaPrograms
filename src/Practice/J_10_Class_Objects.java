@@ -19,6 +19,7 @@ public class J_10_Class_Objects {
     {
         System.out.println(J_10_Class_Objects.wheels);
         System.out.println("Test ");
+        System.out.println("Test2");
         System.out.println(wheels);
     }
     public static void main(String[] args) {
