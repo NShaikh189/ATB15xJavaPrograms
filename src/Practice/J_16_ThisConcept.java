@@ -31,11 +31,18 @@ public class J_16_ThisConcept {
             //this();
     }
 
-    public static void main(String[] args) {
+    public void m1()
+    {
+      //  this(); //Error: java: explicit constructor invocation may only appear within a constructor body
+    }
+
+     static void main() {
         J_16_ThisConcept obj1 = new J_16_ThisConcept();
         System.out.println(obj1.name+" : "+obj1.model+" : "+wheels);
 
         J_16_ThisConcept obj2 = new J_16_ThisConcept("Hyndai","Creata");
         System.out.println(obj2.name+" : "+obj2.model+" : "+wheels);
+
+        obj2.m1();
     }
 }
