@@ -9,6 +9,7 @@ It should be the first statement in the constructor
 this keyword
 scope is limited to the current class
 refers to the current class object
+Used in the builder pattern to return the current class object
 access instance variables
  */
 
