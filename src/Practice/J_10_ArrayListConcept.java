@@ -7,6 +7,8 @@ import java.util.List;
 /*
 *Array -- Collection of similar data types, static array
 *ArrayList -- CLASS, dynamic Array, create object of the ArrayList using new Keyboard
+* can store empty and null values
+* Maintains order
 * Default Virtual Capacity - 10, pyhsical capacity - memory space consumed
 * Dynamic allocation - Increase capacity by VC/2
 * remove(index) - Remove the value and shrink the capacity
@@ -64,6 +66,8 @@ public class J_10_ArrayListConcept {
         empNamesList.add("Sachin");
         empNamesList.add("Dhoni");
         empNamesList.add("Rohit");
+        empNamesList.add("");
+        empNamesList.add(null);
         System.out.println(empNamesList.size());
         System.out.println(empNamesList);
 
