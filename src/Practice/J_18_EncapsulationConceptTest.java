@@ -16,5 +16,7 @@ public class J_18_EncapsulationConceptTest {
 
         System.out.println("emp details");
         getEmpDetails(obj1);
+
+
     }
 }
