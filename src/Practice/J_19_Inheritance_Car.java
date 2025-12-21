@@ -14,6 +14,14 @@ public class J_19_Inheritance_Car extends J_19_Inheritance_Vehicle{
         System.out.println("Car : Engine Type");
     }
 
+
+    //Method hiding: Parent class static members with same signature in the child class
+    public static void speed()
+    {
+        System.out.println("Car : Speed");
+    }
+
+
 	    /*
 	     *  Cannot override the final method from Vehicle
            - overrides JavaPrograms.Vehicle.parking
