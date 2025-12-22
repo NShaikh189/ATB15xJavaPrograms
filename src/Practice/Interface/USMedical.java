@@ -6,6 +6,8 @@ package Practice.Interface;
 
 public interface USMedical {
 
+    //variables are static and final by default
+    int min_fee = 100;
     public void physioServices();
 
     public void oncologyServices();

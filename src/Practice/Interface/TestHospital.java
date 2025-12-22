@@ -34,5 +34,7 @@ public class TestHospital {
         //Static methods
         USMedical.billing();
         us.medicalInsurance();
+       // USMedical.min_fee = 500;
+        System.out.println("Minimum fees for USM : "+USMedical.min_fee);
     }
 }
