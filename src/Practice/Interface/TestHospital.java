@@ -31,5 +31,8 @@ public class TestHospital {
         uk.dentalServices();
         uk.emergencyServices();
 
+        //Static methods
+        USMedical.billing();
+        us.medicalInsurance();
     }
 }

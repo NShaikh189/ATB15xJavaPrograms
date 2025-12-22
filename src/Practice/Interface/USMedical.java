@@ -13,4 +13,14 @@ public interface USMedical {
     public void pediaServices();
 
     public  void emergencyServices();
+
+    public static void billing()
+    {
+        System.out.println("US Medical - Billing");
+    }
+
+    public default void medicalInsurance()
+    {
+        System.out.println("USMedical - Medical Insurance");
+    }
 }
