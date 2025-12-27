@@ -1,6 +1,6 @@
 package Practice.Interface;
 
-public class FortisHospital implements USMedical,UKMedical, IndianMedical{
+public class FortisHospital extends Hospital implements USMedical,UKMedical, IndianMedical{
 
     @Override
     public void gynecServices() {

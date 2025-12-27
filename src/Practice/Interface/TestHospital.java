@@ -36,5 +36,9 @@ public class TestHospital {
         us.medicalInsurance();
        // USMedical.min_fee = 500;
         System.out.println("Minimum fees for USM : "+USMedical.min_fee);
+
+        FortisHospital fh1 = new FortisHospital();
+        fh1.registration();
+        fh1.insurer();
     }
 }
