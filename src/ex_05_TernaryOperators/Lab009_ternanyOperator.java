@@ -1,4 +1,6 @@
-public class ex_05_ternanyOperator {
+package ex_05_TernaryOperators;
+
+public class Lab009_ternanyOperator {
     public static void main() {
         int marks = 100;
         String result = marks>=40 ? "Pass" : "Fail";
