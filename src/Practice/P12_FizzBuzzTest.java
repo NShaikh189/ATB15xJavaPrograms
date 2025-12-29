@@ -8,7 +8,7 @@ For numbers that are multiples of both 3 and 5, print "FizzBuzz."
 
  */
 public class P12_FizzBuzzTest {
-    public static void main() {
+    public static void main(String[] args) {
         int n = 100;
         for(int i=1;i<=n;i++)
         {
