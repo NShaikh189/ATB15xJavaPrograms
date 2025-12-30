@@ -2,7 +2,7 @@ package Practice.Abstraction;
 
 public abstract class Page {
 
-   private int min_speed;
+   private static  int min_speed;
 
     public Page()
     {
