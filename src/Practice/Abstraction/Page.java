@@ -2,7 +2,7 @@ package Practice.Abstraction;
 
 public abstract class Page {
 
-    int min_speed = 60;
+   private int min_speed;
 
     public Page()
     {
@@ -27,6 +27,13 @@ public abstract class Page {
     public void footers()
     {
         System.out.println("Page - Footers displayed");
+    }
+
+  //  public  default  void pageHeader(){} abstract class cannot have default methods.
+    //default keyword can be used only with the interfacces
+
+    public  static void pageAuthor(){
+        System.out.println("PageAuthor static ");
     }
 
 }
