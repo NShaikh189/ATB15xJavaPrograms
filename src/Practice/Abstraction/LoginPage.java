@@ -13,4 +13,14 @@ public class LoginPage extends Page{
     {
         System.out.println("Login Page - constructor : "+x);
     }
+
+    @Override
+    public void title() {
+        System.out.println("Login Page - Title");
+    }
+
+    @Override
+    public void url() {
+        System.out.println("Login Page - url");
+    }
 }

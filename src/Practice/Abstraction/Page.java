@@ -15,4 +15,18 @@ public abstract class Page {
         min_speed = x;
         System.out.println("Page constructor : "+min_speed);
     }
+
+    public abstract void title();
+    public abstract void url();
+
+    public void displayLogo()
+    {
+        System.out.println("Page - Logo displayed");
+    }
+
+    public void footers()
+    {
+        System.out.println("Page - Footers displayed");
+    }
+
 }
