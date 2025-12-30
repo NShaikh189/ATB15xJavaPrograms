@@ -21,6 +21,8 @@ public class LoginPage extends Page{
 
     @Override
     public void url() {
-        System.out.println("Login Page - url");
+        System.out.println("Login Page - url"+super.min_speed);
+        super.displayLogo();
+
     }
 }
