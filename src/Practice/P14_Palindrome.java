@@ -24,5 +24,6 @@ public class P14_Palindrome {
         else
             System.out.println("Is Not a Palindrome");
 
+        scanner.close();
     }
 }
