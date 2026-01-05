@@ -7,7 +7,8 @@ public class J_19_Inheritance_Car extends J_19_Inheritance_Vehicle{
      */
     @Override
     public void start(){
-        System.out.println("Vehicle Car : start");
+        System.out.println("Vehicle Car : start"+super.wheels);
+
     }
 
     public void engine(){

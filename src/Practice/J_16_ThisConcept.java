@@ -2,7 +2,7 @@ package Practice;
 
 /*
 this() is used to call the current class constructor
-can be used only inside the constructor
+this() can be used only inside the constructor
 used for constructor chaining - this(), this(10) etc
 It should be the first statement in the constructor
 
@@ -35,6 +35,8 @@ public class J_16_ThisConcept {
     public void m1()
     {
       //  this(); //Error: java: explicit constructor invocation may only appear within a constructor body
+        System.out.println(this.model);
+        System.out.println(this.name);
     }
 
      static void main() {

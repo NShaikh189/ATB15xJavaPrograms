@@ -1,7 +1,7 @@
 package Practice;
 
 public class J_19_Inheritance_Vehicle {
-
+    int wheels = 4;
     public void start(){
         System.out.println("Vehicle : start");
     }
