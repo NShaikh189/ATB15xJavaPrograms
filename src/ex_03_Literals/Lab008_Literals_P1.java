@@ -10,5 +10,11 @@ public class Lab008_Literals_P1 {
         char v=65;
         System.out.println(rs);
         System.out.println(v);
+        Boolean flag=null;
+        //boolean flag1 = null; Compile Time java: incompatible types: <nulltype> cannot be converted to boolean
+        if(flag) //Runtime Exception: NullPointerException
+        System.out.println("True");
+        else
+            System.out.println("False");
     }
 }
