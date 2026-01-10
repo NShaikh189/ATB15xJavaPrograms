@@ -6,16 +6,16 @@ public class P20_NumberPalindrome {
 
     public static void checkPalindrome(int num)
     {
-
-        int originalNumber = num;
-        int revNumber=0, temp;
-        while(num!=0)
-        {
-            temp = num%10;
-            revNumber = revNumber*10+temp;
-            num = num/10;
-        }
-        if(originalNumber==revNumber)
+        //int originalNumber = num;
+        int revNumber=P30_ReverseNumber.reverseNumber(num);
+//                int temp;
+//        while(num!=0)
+//        {
+//            temp = num%10;
+//            revNumber = revNumber*10+temp;
+//            num = num/10;
+//        }
+        if(num==revNumber)
         System.out.println("Number is a Palindrome");
         else
             System.out.println("Not a Palindrome0");

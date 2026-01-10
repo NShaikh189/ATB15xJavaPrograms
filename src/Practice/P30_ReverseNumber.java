@@ -11,10 +11,8 @@ import java.util.stream.Stream;
  */
 public class P30_ReverseNumber {
 
-    public static void main() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number");
-        int num = scanner.nextInt();
+    public static int reverseNumber(int num)
+    {
         int revnumber=0;
         while(num!=0)
         {
@@ -22,7 +20,15 @@ public class P30_ReverseNumber {
             num = num/10;
 
         }
-        System.out.println(revnumber);
+
+        return revnumber;
+    }
+    public static void main() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int num = scanner.nextInt();
+        int reverseNumber = reverseNumber(num);
+        System.out.println(reverseNumber);
 
 
         scanner.close();
