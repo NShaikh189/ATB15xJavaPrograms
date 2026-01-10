@@ -23,6 +23,8 @@ public class P30_ReverseNumber {
 
         }
         System.out.println(revnumber);
+
+
         scanner.close();
     }
 }
