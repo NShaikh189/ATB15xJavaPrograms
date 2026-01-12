@@ -1,9 +1,7 @@
 package Practice;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class P34_LongestSubstringWithoutRepeat {
     public static void main(String[] args) {
@@ -11,32 +9,36 @@ public class P34_LongestSubstringWithoutRepeat {
 
         String str = scanner.next();
 
-        Set<Character> set = new HashSet<>();
+        Set<Character> set = new LinkedHashSet<>();
         int p1=0;
+        int maxLen = 0;
+        //StringBuilder result = new StringBuilder();
+        String result="";
         for(int i=0; i< str.length();i++)
         {
             char ch = str.charAt(i);
 
-            if(!set.contains(ch))
+            while(set.contains(ch))
             {
-                set.add(ch);
+                set.remove(str.charAt(p1));
+                p1++;
             }
-            else
+
+            set.add(ch);
+
+            if(set.size()>maxLen)
             {
-                while(set.contains(ch))
-                {
-                    set.remove(str.charAt(p1));
-                    p1++;
-                }
-                set.add(ch);
+                maxLen = set.size();
+                result = set.stream()
+                        .map(String::valueOf)
+                        .reduce("",String::concat);
             }
         }
-        String result = "";
-        for(Character iterator: set)
-        {
-            result = result+iterator;
-        }
-        System.out.println(result);
+//        for(Character c: set)
+//        {
+//            result.append(c);
+//        }
+       System.out.println(result);
         scanner.close();
     }
 }
