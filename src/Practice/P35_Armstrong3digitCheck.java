@@ -18,7 +18,7 @@ public class P35_Armstrong3digitCheck {
     boolean flag = false;
     int sum=0;
     int number = num;
-    if(num>99)
+    if(num>99 && num<1000)
     {
         while(num!=0)
         {
