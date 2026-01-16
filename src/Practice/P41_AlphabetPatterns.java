@@ -3,10 +3,11 @@ package Practice;
 public class P41_AlphabetPatterns {
     public static void main(String[] args) {
 
-        for(char i='A'; i<='E'; i++)
+        int n=6;
+        for(int i=1; i<=n; i++)
         {
-            for(char n='A'; n<=i; n++)
-                System.out.print(n);
+            for(char ch='A'; ch<='A'+i; ch++)
+                System.out.print(ch);
             System.out.print(",");
 
         }
