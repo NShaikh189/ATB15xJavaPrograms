@@ -11,7 +11,7 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         int arr[] = {23,22,53,12,5,2,6,1,28}; //9
-
+        int cnt=0;
         //23,22,53,12,5,2,6,1,28
         for(int i=0; i<arr.length;i++)
         {
@@ -24,10 +24,11 @@ public class BubbleSort {
                    arr[j-1]=arr[j];
                    arr[j]=temp;
                 }
-
+            cnt++;
             }
         }
 
         System.out.println("Sorted Array: "+ Arrays.toString(arr));
+        System.out.println("No. of steps: "+cnt);
     }
 }
