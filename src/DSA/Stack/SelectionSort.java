@@ -23,6 +23,6 @@ public class SelectionSort {
             }
         }
         System.out.println(Arrays.toString(arr));
-        System.out.println("No. of steps: "+count);
+        System.out.println("No. of steps: "+count); //45
     }
 }
