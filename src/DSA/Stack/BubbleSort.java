@@ -29,6 +29,6 @@ public class BubbleSort {
         }
 
         System.out.println("Sorted Array: "+ Arrays.toString(arr));
-        System.out.println("No. of steps: "+cnt);
+        System.out.println("No. of steps: "+cnt); //36
     }
 }
