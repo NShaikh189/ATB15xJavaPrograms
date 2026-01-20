@@ -20,6 +20,7 @@ public class SelectionSort {
                     arr[minIndex] = temp;
                 }
                 count++;
+
             }
         }
         System.out.println(Arrays.toString(arr));
