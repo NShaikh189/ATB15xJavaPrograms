@@ -8,6 +8,7 @@ public class MergeSort {
 
     private static void sort(int[] arr)
     {
+        //Break
         if(arr.length<2)
             return;
         int middle = arr.length/2;
@@ -23,11 +24,11 @@ public class MergeSort {
         {
             right[i-middle] = arr[i];
         }
-        System.out.println(Arrays.toString(left));
-        System.out.println(Arrays.toString(right));
-        sort(left);
-        sort(right);
+        //1. L {4,1} => R = {2,7,9}
+        sort(left); //sort(4,1) => sort(4), sort(1)
+        sort(right); //
 
+        //merge
         merge(left, right, arr);
     }
 
