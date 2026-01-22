@@ -72,13 +72,10 @@ public class BinaryTreeSearch {
 
     public int getMaxElement(Node root)
     {
-        Node current = root;
-        while(current.right!=null)
-        {
-            current = current.right;
-        }
+        if(root.right==null)
+            return root.value;
 
-        return current.value;
+        return getMaxElement(root.right);
 
     }
 }
