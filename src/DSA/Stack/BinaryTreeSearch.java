@@ -1,7 +1,7 @@
 package DSA.Stack;
 
 
-
+import org.w3c.dom.ls.LSOutput;
 
 public class BinaryTreeSearch {
     Node root;
@@ -48,12 +48,36 @@ public class BinaryTreeSearch {
         }
         bts.sortedOrder();
         bts.maxElement();
+        bts.getHeight();
+        bts.search(7);
+    }
+
+
+    public void search(int value)
+    {
+        System.out.println(searchB(root,value)? value+" Found": value+" Not Found");
     }
 
     public void sortedOrder()
     {
         inorderTraversal(root);
     }
+
+    public boolean searchB(Node root, int val)
+    {
+        if(root.value == val)
+            return true;
+
+        if(root == null)
+            return false;
+
+        if(val<root.value)
+         return searchB(root.left,val);
+        else
+           return  searchB(root.right,val);
+
+    }
+
     public static void inorderTraversal(Node root)
     {
         if(root!=null)
@@ -77,5 +101,18 @@ public class BinaryTreeSearch {
 
         return getMaxElement(root.right);
 
+    }
+
+    public void getHeight()
+    {
+        System.out.println("Root Height"+height(root));
+    }
+
+    public int height(Node root)
+    {
+        if(root==null)
+            return -1;
+
+        return 1+Math.max(height(root.left),height(root.right));
     }
 }
