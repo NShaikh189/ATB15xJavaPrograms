@@ -21,7 +21,6 @@ public class BinaryTreeSearch {
     {
         root = insertNode(root, value);
 
-        //inorderTraversal(root);
     }
 
     public  Node insertNode(Node root, int value)
@@ -42,13 +41,13 @@ public class BinaryTreeSearch {
             return  root;
     }
     public static void main(String[] args) {
-        int arr[] = {4, 6, 12, 3, 9, 7, 14, 2,35};
+        int arr[] = {4, 6, 12, 3, 9, 7, 14, 2};
         BinaryTreeSearch bts = new BinaryTreeSearch();
         for (int i = 0; i < arr.length; i++) {
             bts.insert(arr[i]);
         }
         bts.sortedOrder();
-        //inorderTraversal(root);
+        bts.maxElement();
     }
 
     public void sortedOrder()
@@ -63,5 +62,23 @@ public class BinaryTreeSearch {
             System.out.println(root.value);
             inorderTraversal(root.right);
         }
+    }
+
+    public void maxElement()
+    {
+        int maxValue = getMaxElement(root);
+        System.out.println("Max Element: "+maxValue);
+    }
+
+    public int getMaxElement(Node root)
+    {
+        Node current = root;
+        while(current.right!=null)
+        {
+            current = current.right;
+        }
+
+        return current.value;
+
     }
 }
