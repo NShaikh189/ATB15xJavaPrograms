@@ -2,7 +2,7 @@ package Practice;
 
 import java.util.Scanner;
 //num =5
-//fnum = 0,1,1,2,3,5
+//fnum = 0,1,1,2,3,5,8,13
 public class P29_FibonacciSeries {
     public static void main() {
         System.out.println("Enter the number to find the fibonacci series");
