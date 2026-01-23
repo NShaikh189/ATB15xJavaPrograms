@@ -4,7 +4,7 @@ import java.util.Scanner;
 //madam
 //adam
 //dam
-public class StringPalindromeRecursion {
+public class P49_StringPalindromeRecursion {
 
     static String reverseString(String str)
     {
