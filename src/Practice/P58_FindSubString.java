@@ -10,28 +10,28 @@ public class P58_FindSubString {
 
     static void checkContains(String str, String subs)
     {
-        if(subs.length()>str.length())
-        {
-            System.out.println("Does not contains");
-            return;
-        }
+       if(subs.length()>str.length())
+       {
+           System.out.println("Not contains");
+           return;
+       }
 
-        for(int i =0; i<str.length()-subs.length();i++)
-         {
-             int j=0;
-             while(j<subs.length() && str.charAt(i+j)==subs.charAt(j))
-             {
-                 j++;
-             }
+       for(int i=0; i<str.length()-subs.length();i++)
+       {
+           int j=0;
+           while(j<subs.length()&&str.charAt(i+j)==subs.charAt(j))
+           {
+               j++;
+           }
 
-             if(j==subs.length())
-             {
-                 System.out.println("contains");
-                 return;
-             }
-         }
+           if(j==subs.length())
+           {
+               System.out.println("contains");
+               return;
+           }
 
-             System.out.println("Not contains");
+       }
 
+        System.out.println("Not contains");
     }
 }
