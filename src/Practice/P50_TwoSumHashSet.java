@@ -1,6 +1,6 @@
 package Practice;
 
-import java.util.HashSet;
+import java.util.*;
 
 public class P50_TwoSumHashSet {
 
@@ -15,11 +15,34 @@ public class P50_TwoSumHashSet {
             hashSet.add(num);
         }
     }
-    public static void main(String[] args) {
-        int arr[] = {4,3,2,1,5,6};
 
-        int target = 5;
+    public static int[] twoSum1(int[] nums, int target) {
+
+        Map<Integer,Integer> hashMap = new HashMap<>();
+
+        for(int i=0;i<=nums.length-1;i++)
+        {
+            int temp = target - nums[i];
+
+            if(hashMap.containsKey(temp))
+            {
+             return new int[]{hashMap.get(temp),i};
+            }
+
+            hashMap.put(nums[i],i);
+        }
+
+        return new int[]{-1,-1};
+    }
+    public static void main(String[] args) {
+        int arr[] = {2,3,4,5,7,11,15};
+
+        int target = 9;
 
         twoSum(arr,target);
+
+
+        int arr1[] = twoSum1(arr,target);
+        System.out.println(Arrays.toString(arr1));
     }
 }
