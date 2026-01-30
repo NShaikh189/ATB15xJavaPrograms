@@ -5,34 +5,37 @@ import java.util.stream.Collectors;
 
 public class P60_LongestPalindromaticSubstring {
 
-    public static void main(String[] args) {
-        String str = "babad";
-        String subs, lsubs;
-        int maxLen = 0;
-        Set<Character> hashSet = new LinkedHashSet<>();
-        Map<String,Integer> hashMap = new HashMap<>();
-        for(int i=0;i<str.length();i++)
-        {
-            char ch = str.charAt(i);
-            int p=0;
-            while(hashSet.contains(ch))
-            {
+        public static String longestPalindrome(String s) {
+            if (s == null || s.length() < 2)
+                return s;
 
-                hashSet.remove(str.charAt(p));
-                p++;
+            int start = 0, end = 0;
+
+            for (int i = 0; i < s.length(); i++) {
+                int len1 = expand(s, i, i);     // odd
+                int len2 = expand(s, i, i + 1); // even
+                int len = Math.max(len1, len2);
+
+                if (len > end - start) {
+                    start = i - (len - 1) / 2;
+                    end = i + len / 2;
+                }
             }
-            hashSet.add(ch);
-
-           subs = hashSet.stream().map(String::valueOf).collect(Collectors.joining());
-           hashMap.put(subs,subs.length());
+            return s.substring(start, end + 1);
         }
 
-    int maxValue = Collections.max(hashMap.values());
-
-        for(Map.Entry<String,Integer> entry: hashMap.entrySet())
-        {
-            if(entry.getValue()==maxValue)
-                System.out.println(entry.getKey());
+        private static int expand(String s, int left, int right) {
+            while (left >= 0 && right < s.length()
+                    && s.charAt(left) == s.charAt(right)) {
+                left--;
+                right++;
+            }
+            return right - left - 1;
         }
+
+    public static void main(String[] args) {
+        System.out.println(longestPalindrome("babad")); // bab / aba
+        System.out.println(longestPalindrome("cbbd"));  // bb
     }
+
 }
