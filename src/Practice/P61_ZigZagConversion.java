@@ -37,11 +37,11 @@ public class P61_ZigZagConversion {
     }
 
     public static void main(String[] args) {
-        System.out.println(convert("PAYPALISHIRING", 3));
+        System.out.println(converts("PAYPALISHIRING", 3));
         // Output: PAHNAPLSIIGYIR
     }
 
-    public String converts(String s, int numrows)
+    public static String converts(String s, int numrows)
     {
         StringBuilder sb[] = new StringBuilder[numrows];
 
@@ -53,7 +53,22 @@ public class P61_ZigZagConversion {
         int currRow = 0;
         boolean goDown = false;
 
-        if(currRow==0 || currRow<=numrows-1)
-            goDown = true;
+        for(char ch: s.toCharArray())
+        {
+            sb[currRow].append(ch);
+
+            if(currRow==0 || currRow== numrows-1)
+                goDown = !goDown;
+
+            currRow = currRow + ((goDown)?1:-1);
+        }
+
+        // Combine all rows
+        StringBuilder result = new StringBuilder();
+        for (StringBuilder row : sb) {
+            result.append(row);
+        }
+
+        return result.toString();
     }
 }
