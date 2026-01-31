@@ -16,5 +16,22 @@ public class P64_ConvertArrayToList {
 
         String s[] = aList.toArray(new String[aList.size()]); //new String[0] defaulted to 0 will check the size of the String and if it is greater it will auto assign
         System.out.println(Arrays.toString(s));
+
+        String ns[] = aList.stream().map(String::valueOf).toArray(size -> new String[size]);
+        System.out.println(Arrays.toString(ns));
+
+        int i[] = {3,4,5,2,5};
+
+        List<Integer> intList = new ArrayList<>();
+        for(int x: i)
+            intList.add(x);
+
+        System.out.println("int to list: "+intList);
+        System.out.println("List to int[]");
+
+       int y[] = intList.stream().mapToInt(Integer::valueOf).toArray();
+
+        System.out.println(Arrays.toString(y));
+
     }
 }
