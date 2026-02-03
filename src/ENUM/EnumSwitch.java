@@ -12,5 +12,10 @@ public class EnumSwitch {
             case Friday -> System.out.println("Friday");
 
         }
+
+        API_URLS url = API_URLS.google;
+        System.out.println(url); //google
+      //  System.out.println(API_URLS.values().toString());
+        System.out.println(API_URLS.valueOf("fb"));
     }
 }
