@@ -1,4 +1,4 @@
-package Exam_10_Feb_Programs;
+package Exam_10_Feb_Programs.Polymorphism;
 
 public class AnimalTest {
 
