@@ -1,7 +1,7 @@
 package Exam_10_Feb_Programs.Inheritance;
 
-public class Vehicle {
+public abstract class Vehicle {
 
-    public void start()
-    {}
+    public abstract void start();
+
 }
