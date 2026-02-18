@@ -1,5 +1,18 @@
 package ENUM;
 
 public enum API_URLS {
-    google, timesofindia, fb
+    GOOGLE("https://google.com"),
+    timesofindia("ssss"),
+    fb("sssdsds");
+
+    private String url;
+
+    API_URLS(String url)
+    {
+        this.url = url;
+    }
+    public String getUrl()
+    {
+        return this.url;
+    }
 }

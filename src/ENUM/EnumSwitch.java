@@ -13,9 +13,12 @@ public class EnumSwitch {
 
         }
 
-        API_URLS url = API_URLS.google;
-        System.out.println(url); //google
+      //  API_URLS url = API_URLS.google;
+      //  System.out.println(url); //google
       //  System.out.println(API_URLS.values().toString());
-        System.out.println(API_URLS.valueOf("fb"));
+      //  System.out.println(API_URLS.valueOf("fb"));
+
+        String apiurl = API_URLS.GOOGLE.getUrl();
+        System.out.println(apiurl);
     }
 }
