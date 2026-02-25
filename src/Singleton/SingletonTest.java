@@ -4,8 +4,8 @@ public class SingletonTest {
 
     public static void main(String[] args) {
 
-        SingletonConcept sobj = SingletonConcept.getObj();
+        SingletonConcept singletonConceptObj = SingletonConcept.getSingletonConceptObj();
 
-        SingletonConcept.getObj().display();
+        singletonConceptObj.displayInfo();
     }
 }
