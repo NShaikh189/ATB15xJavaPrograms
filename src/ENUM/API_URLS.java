@@ -5,14 +5,15 @@ public enum API_URLS {
     timesofindia("ssss"),
     fb("sssdsds");
 
-    private String url;
+   private String url;
+   //modifier not allowed
+   API_URLS(String url)
+   {
+       this.url = url;
+   }
 
-    API_URLS(String url)
-    {
-        this.url = url;
-    }
-    public String getUrl()
-    {
-        return this.url;
-    }
+   public String getUrl()
+   {return  this.url;
+   }
+
 }
