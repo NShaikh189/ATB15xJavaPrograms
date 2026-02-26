@@ -11,5 +11,8 @@ public class Runner {
 
         Bank hdfcbank2= new Bank();
         hdfcbank2.createAccount("Property tax Bill");
+
+        Bank hdfcbank3= new Bank();
+        hdfcbank3.createAccount("Passport");
     }
 }
