@@ -5,14 +5,14 @@ public class Runner {
 
     void main() {
 
-        Bank hdfcbank = new Bank();
-        hdfcbank.createAccount("Electricity Bill");
+        Bank hb_wakad = new HDFCWakad();
+        hb_wakad.createAccount("Electricity Bill");
 
 
-        Bank hdfcbank2= new Bank();
-        hdfcbank2.createAccount("Property tax Bill");
+        Bank hb_pune= new HDFCPune();
+        hb_pune.createAccount("Property tax Bill");
 
-        Bank hdfcbank3= new Bank();
-        hdfcbank3.createAccount("Passport");
+        //Bank hdfcbank3= new Bank();
+        hb_pune.createAccount("Passport");
     }
 }
