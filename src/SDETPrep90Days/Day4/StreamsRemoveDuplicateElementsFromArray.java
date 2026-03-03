@@ -14,5 +14,8 @@ public class StreamsRemoveDuplicateElementsFromArray {
         int uniqueArr[] = Arrays.stream(a).distinct().toArray();
         for(int x: uniqueArr)
             System.out.println(x);
+
+        System.out.println(uniqueArr.toString());//[I@5b2133b1
+        System.out.println(Arrays.toString(uniqueArr));
     }
 }
