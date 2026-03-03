@@ -1,5 +1,8 @@
 package DSA.Stack;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class NodeLinkedList {
 
     public static void main(String[] args) {
@@ -13,8 +16,31 @@ public class NodeLinkedList {
 
         while(current!=null)
         {
-            System.out.println(current.data);
+            System.out.print(current.data+" ");
             current = current.next;
+        }
+        //System.out.println(head.toString());
+        reverseLinkedList(head);
+    }
+
+    public static void reverseLinkedList(Node head)
+    {
+        System.out.println("\nReverse linked list");
+        Node prev = null;
+        Node current = head;
+        Node next = null;
+
+        while(current!=null) {
+           next = current.next;
+           current.next = prev;
+           prev = current;
+           current = next;
+        }
+
+        while(prev!=null)
+        {
+            System.out.print(prev.data+" ");
+            prev = prev.next;
         }
     }
 }
