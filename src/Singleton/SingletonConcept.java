@@ -11,6 +11,7 @@ public class SingletonConcept {
     {}
 
     public static SingletonConcept getSingletonConceptObj() {
+
         return singletonConceptObj = new SingletonConcept();
     }
 
