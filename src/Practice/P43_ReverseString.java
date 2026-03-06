@@ -9,28 +9,31 @@ public class P43_ReverseString {
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
        // String temp="";
-            getReverse(str);
-        char[] ch = str.toCharArray();
+            getReverseArray(str);
+            getReverseStream(str);
 
-        if(str.length()>1)
-        {
-            str = "";
-            for(int i= ch.length-1; i>=0; i--)
-                str += ch[i];
-        }
-
-        System.out.println("Reverse String : "+str);
 
 
     }
 
-    public static void getReverse(String str)
+    public static void getReverseArray(String str)
     {
-        String reverseString = IntStream.range(0, str.length()-1)
-                .mapToObj(i->str.charAt(str.length()-1-i))
+        char[] chArr = str.toCharArray();
+
+        for(int i=str.length()-1; i>=0; i--)
+        {
+            System.out.print(str.charAt(i));
+        }
+        System.out.println();
+    }
+    public static void getReverseStream(String str)
+    {
+
+       String revString =  IntStream.range(0,str.length())
+                .mapToObj(x->str.charAt(str.length()-1-x))
                 .map(String::valueOf)
                 .collect(Collectors.joining());
 
-        System.out.println(reverseString);
+        System.out.println(revString);
     }
 }
