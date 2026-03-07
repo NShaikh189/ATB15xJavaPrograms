@@ -1,5 +1,6 @@
 package Practice;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -11,9 +12,36 @@ public class P43_ReverseString {
        // String temp="";
             getReverseArray(str);
            getReverseStream(str);
+           String revstring2PR = getReverseTwoPtr(str);
 
+      if(revstring2PR.equals(str))
+          System.out.println("String is a Palindrome");
+      else System.out.println("Not a Palindrome");
 
+    }
 
+    private static String getReverseTwoPtr(String str) {
+
+        int left = 0;
+        int right = str.length()-1;
+        char temp;
+        char ca[] = str.toCharArray();
+        StringBuilder s = new StringBuilder();
+        while(left<right)
+        {
+            temp = ca[left];
+            ca[left] = ca[right];
+            ca[right] = temp;
+            left++;
+            right--;
+        }
+
+        for(char c: ca)
+            s.append(c);
+        System.out.println("Two Point approach"+Arrays.toString(ca));
+        System.out.println(s);
+
+        return s.toString();
     }
 
     public static void getReverseArray(String str)
