@@ -31,6 +31,7 @@ public class P73_SDET_List_FirstAndSecondMax {
         }
 
         System.out.println("First Max: "+firstMax );
+
         System.out.println("Second Max: "+secondMax );
     }
 }
