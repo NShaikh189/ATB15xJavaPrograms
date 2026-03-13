@@ -3,6 +3,7 @@ package Practice;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+//rvi Kumar 24
 public class P77_SDET_D14_StringManipulation {
     public static void main() {
         String str = "r@56vi Ku$%mar67";
@@ -20,8 +21,8 @@ public class P77_SDET_D14_StringManipulation {
               sum+=Character.getNumericValue(ch);
 
         }
-
-        System.out.println(sb.toString()+""+sum);
+        sb.append(' ').append(sum);
+        System.out.println(sb.toString());
 
     }
 }
