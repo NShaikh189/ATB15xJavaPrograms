@@ -8,7 +8,7 @@ O/p: a14b5c3
  */
 public class P31_Anagram {
     public static void main() {
-        String str = "av12b2c4b3a2";
+        String str = "av12b2c4xb3a2";
 
         HashMap<Character,Integer> hashmap = new HashMap<>();
         for(int i=0;i<str.length();)
